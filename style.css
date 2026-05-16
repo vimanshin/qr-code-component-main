@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/Outfit-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/Outfit-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-bg: hsl(212, 45%, 89%);
+  --color-text-body: hsl(216, 15%, 48%);
+  --color-text-heading: hsl(218, 44%, 22%);
+  --font-size-body: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--font-size-body);
+  background-color: var(--color-bg);
+}
+
+main {
+  display: flex;
+  justify-content: center; /* центр по горизонтали */
+  align-items: center; /* центр по вертикали */
+  min-height: 100vh; /* чтобы main занимал всю высоту экрана */
+  padding: 0 27px;
+}
+
+.card {
+  padding: 16px 16px 50px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+  max-width: 320px;
+  width: 100%;
+}
+
+.card__image {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.card__title {
+  color: var(--color-text-heading);
+  font-weight: 700;
+  text-align: center;
+  line-height: 120%;
+  margin-top: 24px;
+  font-size: 22px;
+}
+
+.card__description {
+  color: var(--color-text-body);
+  font-weight: 400;
+  text-align: center;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  margin-top: 16px;
+  padding: 0 16px;
+}
